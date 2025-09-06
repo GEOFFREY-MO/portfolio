@@ -13,7 +13,7 @@ export default function Home() {
             Hey, I’m <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent">Geofrey Mokami Kegocha</span>
           </h1>
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            AI/Software Engineer building products and helping founders ship faster.
+            Data Scientist, AI/Software Engineer, and Startup Mentor. Building products, sharing knowledge, and turning coders into founders.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-nowrap items-center justify-center gap-2 sm:gap-3 w-full max-w-full px-2 mx-auto">
             <Button size="sm" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3 bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white">Hire Me</Button>
