@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal Business Website — Next.js 14 (App Router), Tailwind, shadcn/ui, Framer Motion.
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -14,9 +14,15 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pages: `app/` — Home, About, Portfolio, Services, Hire, Blog, Contact.
+Global UI: `components/` — Navbar, Footer, ThemeProvider, Button.
+SEO configured via `app/layout.tsx`.
+
+Environment variables: copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_GA_ID`.
+
+Deploy on Vercel: push to GitHub, then import in Vercel. Configure domain in Vercel project settings.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
