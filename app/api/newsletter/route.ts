@@ -29,6 +29,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        Accept: "application/json",
         Authorization: `Token ${apiKey}`,
       },
       body: JSON.stringify({ email }),
@@ -36,9 +37,16 @@ export async function POST(request: Request) {
     })
 
     if (!res.ok) {
-      const text = await res.text()
-      return new Response(JSON.stringify({ ok: false, error: text || "Buttondown error" }), {
-        status: 502,
+      let errorText = "Buttondown error"
+      try {
+        const j = await res.json()
+        errorText = j?.detail || j?.message || JSON.stringify(j)
+      } catch {
+        const t = await res.text()
+        if (t) errorText = t
+      }
+      return new Response(JSON.stringify({ ok: false, error: errorText, status: res.status }), {
+        status: res.status,
         headers: { "content-type": "application/json" },
       })
     }
