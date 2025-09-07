@@ -24,11 +24,15 @@ export default function AboutPage() {
       <section className="grid grid-cols-2 gap-3 sm:gap-6">
         <div className="rounded-xl border border-border p-3 sm:p-6 bg-card/50">
           <h2 className="font-semibold mb-2 text-sm sm:text-base">Tech Professional</h2>
-          <p className="text-xs sm:text-sm text-muted-foreground">Focused on scalable systems, AI/ML, and developer experience. Great fit for remote-first teams and product companies.</p>
+          <p className="text-xs sm:text-sm text-muted-foreground">I’m a Data Scientist and AI/Software Engineer with a passion for building scalable systems, intelligent applications, and seamless developer experiences. I specialize in training models, deploying end-to-end products, and maintaining them for growth. A strong fit for remote-first teams and forward-looking product companies.</p>
         </div>
         <div className="rounded-xl border border-border p-3 sm:p-6 bg-card/50">
           <h2 className="font-semibold mb-2 text-sm sm:text-base">Mentor / Entrepreneur</h2>
-          <p className="text-xs sm:text-sm text-muted-foreground">Helping coders and founders go from idea to shipped product with lean, pragmatic execution.</p>
+          <p className="text-xs sm:text-sm text-muted-foreground">As the voice behind Brother Geof, I guide coders on the path to becoming founders — teaching how to transform ideas into real products through lean, pragmatic execution. My content and mentoring help bridge the gap between coding and entrepreneurship.</p>
+        </div>
+        <div className="rounded-xl border border-border p-3 sm:p-6 bg-card/50 col-span-2">
+          <h2 className="font-semibold mb-2 text-sm sm:text-base">Startup Leadership</h2>
+          <p className="text-xs sm:text-sm text-muted-foreground">I also served as CTO of Msafara Global, where I guided the development of a cloud-based EV management platform. From architecture to execution, I’ve helped shape innovative solutions that solve real-world challenges.</p>
         </div>
       </section>
 
