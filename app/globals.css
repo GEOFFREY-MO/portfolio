@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -117,5 +118,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  :where(.prose) :where(a):not(:where(.not-prose, .not-prose *)) {
+    @apply text-primary underline underline-offset-4 hover:opacity-90;
   }
 }

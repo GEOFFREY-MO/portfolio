@@ -33,7 +33,9 @@ export default function BlogPage() {
 
       <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
         {posts.map((p) => (
-          <div key={p.slug} className="rounded-xl border border-border p-3 sm:p-6 bg-card/50 shadow-sm hover:shadow-md transition-shadow">
+          <div key={p.slug} className="rounded-xl p-3 sm:p-6 bg-card/50 shadow-sm hover:shadow-md transition-shadow relative group">
+            <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500/20 to-fuchsia-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-border/80 transition-colors" />
             <h3 className="font-semibold text-sm sm:text-base">{p.title}</h3>
             <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">{p.excerpt}</p>
             <Link href={`/blog/${p.slug}`}>
