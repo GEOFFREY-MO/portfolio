@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export const metadata = { title: "Hire Me" }
 
@@ -31,8 +32,10 @@ export default function HirePage() {
       </section>
 
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-        <a href="/resume.pdf" className="underline underline-offset-4 text-sm sm:text-base">Download Resume (PDF)</a>
-        <Button className="w-full sm:w-auto bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white">Schedule an Interview</Button>
+        <a href="/resume.pdf" download className="underline underline-offset-4 text-sm sm:text-base">Download Resume (PDF)</a>
+        <Button asChild className="w-full sm:w-auto bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white">
+          <Link href="/contact">Schedule an Interview</Link>
+        </Button>
       </div>
     </div>
   )
