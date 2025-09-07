@@ -40,9 +40,9 @@ export default function ContactPage() {
           <a href="https://wa.me/1234567890" className="underline underline-offset-4">WhatsApp</a>
           <div className="rounded-xl border border-border p-3 sm:p-6 bg-card/50">
             <div className="font-semibold mb-2">Newsletter</div>
-            <form className="flex flex-col sm:flex-row gap-2">
-              <input className="flex-1 px-3 py-2 rounded-md bg-input/30 border border-input text-sm sm:text-base" placeholder="Your email" />
-              <button className="px-4 py-2 rounded-md bg-primary text-primary-foreground">Subscribe</button>
+            <form className="flex flex-col sm:flex-row gap-2" action="/api/newsletter" method="POST">
+              <input name="email" type="email" required className="flex-1 px-3 py-2 rounded-md bg-input/30 border border-input text-sm sm:text-base" placeholder="Your email" />
+              <button type="submit" className="px-4 py-2 rounded-md bg-primary text-primary-foreground">Subscribe</button>
             </form>
           </div>
           <div className="text-sm text-muted-foreground space-x-4">
