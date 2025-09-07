@@ -17,8 +17,32 @@ export async function POST(request: Request) {
       })
     }
 
-    // Placeholder: integrate Mailchimp/Buttondown/ConvertKit here.
-    // Simulate success.
+    const apiKey = process.env.BUTTONDOWN_API_KEY
+    if (!apiKey) {
+      return new Response(JSON.stringify({ ok: false, error: "Missing BUTTONDOWN_API_KEY" }), {
+        status: 500,
+        headers: { "content-type": "application/json" },
+      })
+    }
+
+    const res = await fetch("https://api.buttondown.email/v1/subscribers", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Token ${apiKey}`,
+      },
+      body: JSON.stringify({ email }),
+      cache: "no-store",
+    })
+
+    if (!res.ok) {
+      const text = await res.text()
+      return new Response(JSON.stringify({ ok: false, error: text || "Buttondown error" }), {
+        status: 502,
+        headers: { "content-type": "application/json" },
+      })
+    }
+
     return new Response(JSON.stringify({ ok: true, message: "Subscribed" }), {
       status: 200,
       headers: { "content-type": "application/json" },
