@@ -36,7 +36,7 @@ export default function AboutPage() {
         <h2 className="text-xl font-semibold">Timeline</h2>
         <ol className="relative border-s border-border pl-4 sm:pl-6">
           {milestones.map((m, idx) => (
-            <motion.li key={m.year} initial={{ opacity: 0, x: -8 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.05 }} className="mb-6">
+            <motion.li key={`${m.year}-${m.title}-${idx}`} initial={{ opacity: 0, x: -8 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.05 }} className="mb-6">
               <div className="absolute -left-2 top-1 size-3 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500" />
               <div className="font-semibold text-sm sm:text-base">{m.year} — {m.title}</div>
               <div className="text-xs sm:text-sm text-muted-foreground">{m.desc}</div>
