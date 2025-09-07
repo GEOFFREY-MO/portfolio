@@ -5,9 +5,9 @@ import Image from "next/image"
 
 export default function AboutPage() {
   const milestones = [
-    { year: "2018", title: "Data Scientist", desc: "Built ML models for analytics." },
-    { year: "2020", title: "AI/Software Engineer", desc: "Shipped AI features end-to-end." },
-    { year: "2022", title: "YouTuber", desc: "Published tech and AI content." },
+    { year: "2022", title: "Data Scientist", desc: "Built ML models for analytics." },
+    { year: "2023", title: "AI/Software Engineer", desc: "Shipped AI features end-to-end." },
+    { year: "2023", title: "YouTuber", desc: "Published tech and AI content." },
     { year: "2024", title: "Startup Builder", desc: "Building product-led businesses." },
   ]
 
