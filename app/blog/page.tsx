@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export const metadata = { title: "Blog" }
 
@@ -33,15 +34,21 @@ export default function BlogPage() {
 
       <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
         {posts.map((p) => (
-          <div key={p.slug} className="rounded-xl p-3 sm:p-6 bg-card/50 shadow-sm hover:shadow-md transition-shadow relative group">
+          <Link
+            key={p.slug}
+            href={`/blog/${p.slug}`}
+            className="rounded-xl p-3 sm:p-6 bg-card/50 shadow-sm hover:shadow-md transition-shadow relative group block"
+            aria-label={`Read: ${p.title}`}
+          >
             <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500/20 to-fuchsia-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-border/80 transition-colors" />
             <h3 className="font-semibold text-sm sm:text-base">{p.title}</h3>
             <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">{p.excerpt}</p>
-            <Link href={`/blog/${p.slug}`}>
-              <Button size="sm" className="bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white">Read</Button>
-            </Link>
-          </div>
+            <span className={cn(
+              buttonVariants({ size: "sm", variant: "default" }),
+              "bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white"
+            )}>Read</span>
+          </Link>
         ))}
       </div>
     </div>
