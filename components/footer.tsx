@@ -16,10 +16,11 @@ export function Footer() {
         <div className="space-y-2">
           <div className="font-semibold">Social</div>
           <ul className="space-y-1 text-muted-foreground">
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-            <li><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></li>
-            <li><a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube</a></li>
-            <li><a href="https://x.com/" target="_blank" rel="noreferrer">X / Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/geofrey-kegocha-1a26ba354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/GEOFFREY-MO" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://youtube.com/@new_in_ai?si=1scZtIJI0jir_W8r" target="_blank" rel="noreferrer">YouTube: New in AI</a></li>
+            <li><a href="https://youtube.com/@brothergeof?si=ihB5T1asoglNNSri" target="_blank" rel="noreferrer">YouTube: Brother Geof</a></li>
+            <li><a href="https://x.com/GKegocha" target="_blank" rel="noreferrer">X / Twitter</a></li>
           </ul>
         </div>
         <div className="space-y-2 col-span-2 md:col-span-1">
