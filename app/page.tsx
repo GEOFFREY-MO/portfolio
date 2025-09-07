@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,9 +21,15 @@ export default function Home() {
             Data Scientist, AI/Software Engineer, and Startup Mentor. Building products, sharing knowledge, and turning coders into founders.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-nowrap items-center justify-center gap-2 sm:gap-3 w-full max-w-full px-2 mx-auto">
-            <Button size="sm" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3 bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white">Hire Me</Button>
-            <Button size="sm" variant="outline" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3">Work With Me</Button>
-            <Button size="sm" variant="ghost" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3">Watch My Channels</Button>
+            <Button asChild size="sm" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3 bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white">
+              <Link href="/hire">Hire Me</Link>
+            </Button>
+            <Button asChild size="sm" variant="outline" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3">
+              <Link href="/services">Work With Me</Link>
+            </Button>
+            <Button asChild size="sm" variant="ghost" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3">
+              <a href="https://youtube.com/@new_in_ai?si=1scZtIJI0jir_W8r" target="_blank" rel="noreferrer">Watch My Channels</a>
+            </Button>
           </div>
         </motion.div>
 
