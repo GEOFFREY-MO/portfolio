@@ -34,8 +34,15 @@ export default function Home() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.5 }} className="mt-10 sm:mt-16 grid grid-cols-2 gap-3 sm:gap-6">
-          <div className="aspect-video rounded-xl border border-border bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10 flex items-center justify-center">
-            <span className="text-sm text-muted-foreground">Intro video placeholder</span>
+          <div className="aspect-video rounded-xl border border-border overflow-hidden">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/VrQFMJT61zM"
+              title="Intro video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
           <div className="rounded-xl border border-border p-3 sm:p-6 bg-card/50">
             <blockquote className="text-xl">“Automation is not replacing humans — it’s freeing them to focus on what matters most.”</blockquote>
