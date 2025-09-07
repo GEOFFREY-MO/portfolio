@@ -28,7 +28,7 @@ export function Footer() {
           <p className="text-muted-foreground">Join for updates on AI, coding, and startups.</p>
           <form className="flex gap-2" action="/api/newsletter" method="POST">
             <input name="email" type="email" required className="flex-1 px-3 py-2 rounded-md bg-input/30 border border-input" placeholder="Your email" />
-            <button type="submit" className="px-4 py-2 rounded-md bg-primary text-primary-foreground">Subscribe</button>
+            <button type="submit" className="px-4 py-2 rounded-md bg-primary text-primary-foreground cursor-pointer">Subscribe</button>
           </form>
         </div>
       </div>
