@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/20 via-blue-500/10 to-transparent" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24 relative">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-center">
+          <div className="flex justify-center mb-4">
+            <Image src="/profile.jpg" alt="Geofrey Mokami Kegocha" width={96} height={96} className="rounded-full border border-border" />
+          </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
             Hey, I’m <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent">Geofrey Mokami Kegocha</span>
           </h1>

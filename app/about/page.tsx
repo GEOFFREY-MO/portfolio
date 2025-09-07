@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function AboutPage() {
   const milestones = [
@@ -13,7 +14,10 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16 space-y-12">
       <header className="space-y-2">
-        <h1 className="text-3xl sm:text-4xl font-bold">About Me</h1>
+        <div className="flex items-center gap-3">
+          <Image src="/profile.jpg" alt="Geofrey Mokami Kegocha" width={56} height={56} className="rounded-full border border-border" />
+          <h1 className="text-3xl sm:text-4xl font-bold">About Me</h1>
+        </div>
         <p className="text-sm sm:text-base text-muted-foreground">My journey from data to product.</p>
       </header>
 
