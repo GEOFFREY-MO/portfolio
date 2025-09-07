@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { NewsletterForm } from "@/components/newsletter-form"
 
 export function Footer() {
   return (
@@ -26,10 +27,7 @@ export function Footer() {
         <div className="space-y-2 col-span-2 md:col-span-1">
           <div className="font-semibold">Newsletter</div>
           <p className="text-muted-foreground">Join for updates on AI, coding, and startups.</p>
-          <form className="flex gap-2" action="/api/newsletter" method="POST">
-            <input name="email" type="email" required className="flex-1 px-3 py-2 rounded-md bg-input/30 border border-input" placeholder="Your email" />
-            <button type="submit" className="px-4 py-2 rounded-md bg-primary text-primary-foreground cursor-pointer">Subscribe</button>
-          </form>
+          <NewsletterForm layout="row" />
         </div>
       </div>
       <div className="py-4 text-center text-xs text-muted-foreground">
