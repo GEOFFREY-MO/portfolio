@@ -38,7 +38,7 @@ export default function ContactPage() {
           {status && <p className="text-sm text-muted-foreground">{status}</p>}
         </form>
         <div className="col-span-2 md:col-span-1 space-y-3 sm:space-y-4">
-          <a href="https://wa.me/0113812408" className="underline underline-offset-4">WhatsApp</a>
+          <a href="https://wa.me/+254113812408" className="underline underline-offset-4">WhatsApp</a>
           <div className="rounded-xl border border-border p-3 sm:p-6 bg-card/50">
             <div className="font-semibold mb-2">Newsletter</div>
             <NewsletterForm layout="stack" />
