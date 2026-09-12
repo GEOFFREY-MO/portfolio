@@ -1,4 +1,7 @@
-export async function POST(request: Request) {
+import type { NextRequest } from "next/server"
+import { NextResponse } from "next/server"
+
+export async function POST(request: NextRequest) {
   try {
     const contentType = request.headers.get("content-type") || ""
     let email = ""
@@ -11,18 +14,12 @@ export async function POST(request: Request) {
     }
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return new Response(JSON.stringify({ ok: false, error: "Invalid email" }), {
-        status: 400,
-        headers: { "content-type": "application/json" },
-      })
+      return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 })
     }
 
     const apiKey = process.env.BUTTONDOWN_API_KEY
     if (!apiKey) {
-      return new Response(JSON.stringify({ ok: false, error: "Missing BUTTONDOWN_API_KEY" }), {
-        status: 500,
-        headers: { "content-type": "application/json" },
-      })
+      return NextResponse.json({ ok: false, error: "Missing BUTTONDOWN_API_KEY" }, { status: 500 })
     }
 
     const res = await fetch("https://api.buttondown.email/v1/subscribers", {
@@ -45,22 +42,11 @@ export async function POST(request: Request) {
         const t = await res.text()
         if (t) errorText = t
       }
-      return new Response(JSON.stringify({ ok: false, error: errorText, status: res.status }), {
-        status: res.status,
-        headers: { "content-type": "application/json" },
-      })
+      return NextResponse.json({ ok: false, error: errorText, status: res.status }, { status: res.status })
     }
 
-    return new Response(JSON.stringify({ ok: true, message: "Subscribed" }), {
-      status: 200,
-      headers: { "content-type": "application/json" },
-    })
+    return NextResponse.json({ ok: true, message: "Subscribed" })
   } catch (error) {
-    return new Response(JSON.stringify({ ok: false, error: "Server error" }), {
-      status: 500,
-      headers: { "content-type": "application/json" },
-    })
+    return NextResponse.json({ ok: false, error: "Server error" }, { status: 500 })
   }
 }
-
-
