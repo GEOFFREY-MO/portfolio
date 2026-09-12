@@ -28,7 +28,7 @@ export default function Home() {
               <Link href="/services">Work With Me</Link>
             </Button>
             <Button asChild size="sm" variant="ghost" className="shrink whitespace-normal leading-4 text-[11px] sm:text-sm px-2 sm:px-3">
-              <a href="https://youtube.com/@new_in_ai?si=1scZtIJI0jir_W8r" target="_blank" rel="noreferrer">Watch My Channels</a>
+              <a href="https://www.youtube.com/@mokami-k" target="_blank" rel="noreferrer">Watch My Channels</a>
             </Button>
           </div>
         </motion.div>
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="aspect-video rounded-xl border border-border overflow-hidden">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/VrQFMJT61zM"
+              src="https://youtu.be/6SM9cOYhKog?si=wmbj6S-6oaOTH8Sd"
               title="Intro video"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
