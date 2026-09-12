@@ -15,7 +15,7 @@ export default function Home() {
             <Image src="/profile.jpg" alt="Geofrey Mokami Kegocha" width={96} height={96} className="rounded-full border border-border" />
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            Hey, I’m <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent">Geofrey Mokami Kegocha</span>
+            Hey, I'm <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent">Geofrey Mokami Kegocha</span>
           </h1>
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Data Scientist, AI/Software Engineer, and Startup Mentor. Building products, sharing knowledge, and turning coders into founders.
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="aspect-video rounded-xl border border-border overflow-hidden">
             <iframe
               className="w-full h-full"
-              src="https://youtu.be/6SM9cOYhKog?si=wmbj6S-6oaOTH8Sd"
+              src="https://www.youtube.com/embed/6SM9cOYhKog?si=wmbj6S-6oaOTH8Sd"
               title="Intro video"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -45,7 +45,7 @@ export default function Home() {
             />
           </div>
           <div className="rounded-xl border border-border p-3 sm:p-6 bg-card/50">
-            <blockquote className="text-xl">“Automation is not replacing humans — it’s freeing them to focus on what matters most.”</blockquote>
+            <blockquote className="text-xl">"Automation is not replacing humans — it's freeing them to focus on what matters most."</blockquote>
           </div>
         </motion.div>
       </div>
