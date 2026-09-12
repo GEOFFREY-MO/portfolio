@@ -46,8 +46,8 @@ export default function ContactPage() {
           <div className="text-sm text-muted-foreground space-x-4">
             <a href="https://www.linkedin.com/in/geofrey-kegocha-1a26ba354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/GEOFFREY-MO" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://youtube.com/@new_in_ai?si=1scZtIJI0jir_W8r" target="_blank" rel="noreferrer">YouTube: New in AI</a>
-            <a href="https://youtube.com/@brothergeof?si=ihB5T1asoglNNSri" target="_blank" rel="noreferrer">YouTube: Brother Geof</a>
+            <a href="https://www.youtube.com/@mokami-k" target="_blank" rel="noreferrer">YouTube: Geofrey Mokami</a>
+          
             <a href="https://x.com/GKegocha" target="_blank" rel="noreferrer">X</a>
           </div>
         </div>
